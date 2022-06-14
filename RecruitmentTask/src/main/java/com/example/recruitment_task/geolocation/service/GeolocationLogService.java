@@ -19,13 +19,10 @@ public class GeolocationLogService {
 
     public GeolocationLog addGeolocationLog(GeolocationLogDTO geolocationLogDTO) {
 
-        GeolocationLog geolocationLog=new GeolocationLog();
-        geolocationLog.setDeviceID(geolocationLogDTO.getDeviceId());
-        geolocationLog.setLongitude(geolocationLogDTO.getLongitude());
-        geolocationLog.setLatitude(geolocationLogDTO.getLatitude());
 
-        return geolocationLogRepository.save(geolocationLog);
-        //return geolocationLogRepository.save(GeolocationLog.of(geolocationLogDTO));
+
+
+        return geolocationLogRepository.save(GeolocationLog.of(geolocationLogDTO));
     }
 
     public List<GeolocationLog> getAllGeolocationLog(){
